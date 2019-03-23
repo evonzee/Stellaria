@@ -34,19 +34,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\TShock\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>References\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OTAPI">
-      <HintPath>..\TShock\OTAPI.dll</HintPath>
+      <HintPath>References\OTAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="TerrariaServer">
-      <HintPath>..\TShock\TerrariaServer.exe</HintPath>
+      <HintPath>References\TerrariaServer.exe</HintPath>
     </Reference>
     <Reference Include="TShockAPI">
-      <HintPath>..\TShock\ServerPlugins\TShockAPI.dll</HintPath>
+      <HintPath>References\TShockAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +60,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetDir)$(TargetFileName) $(ProjectDir)..\TShock\ServerPlugins\$(TargetFileName)
-copy $(TargetDir)$(TargetName).pdb $(ProjectDir)..\TShock\ServerPlugins\$(TargetName).pdb</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
